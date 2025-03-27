@@ -3,6 +3,7 @@ import speech_recognition as sr
 import openai
 from dotenv import load_dotenv, find_dotenv
 from playsound import playsound
+import os
 
 _ = load_dotenv(find_dotenv())
 
@@ -47,7 +48,6 @@ def cria_audio(texto):
 
 def roda_audio():
     playsound(ARQUIVO_AUDIO)
-    import os
     os.remove(ARQUIVO_AUDIO)
 
 if __name__ == '__main__':
